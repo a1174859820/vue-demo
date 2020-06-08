@@ -1,24 +1,3 @@
-# vue-demo
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## npm install 下载运行所需相关依赖
+## vue ui 打开可视化界面
+## 在serve中点击启动,访问localhost:8080预览项目
