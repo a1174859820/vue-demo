@@ -17,7 +17,6 @@
 </template>
 <script>
 import foodCategory from './components/foodCategory'
-import {mapMutations} from 'vuex'
 import footerGuide from '../../components/footerGuide'
 import { getStore } from '../../config/mUtils'
 export default {
@@ -28,11 +27,9 @@ export default {
         }
     },
     methods:{
-        ...mapMutations(['RECORD_ADDRESS']),
         async initData(){
             //获取位置信息 
             await this.axios.get(`/v2/pois/${this.geohash}`).then(res =>{
-                this.RECORD_ADDRESS(res.data);
                 this.msiteTitle = res.data.name;
             })
         }

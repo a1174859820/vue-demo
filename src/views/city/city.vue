@@ -115,7 +115,7 @@ export default {
             }
             this.cityaddr = ''
             setStore('placeHistory',this.historyList)
-            this.SAVE_GEOHASH(cityItem.geohash)
+            this.SAVE_GEOHASH(cityItem.geohash);
         },
         //点击历史记录列表改变之前存储的geohash
         changeGeohash(cityItem){

@@ -9,8 +9,6 @@ Vue.use(Vuex)
 
 const state = {
   geohash: '',//地址geohash值
-  latitude:'',//当前位置经度
-  longitude:'',//当前位置维度
   shopDetail:null,//商家详情信息
   shopCartList:[],//购物车商品列表
   shopCartNumber:{},//购物车商品数量

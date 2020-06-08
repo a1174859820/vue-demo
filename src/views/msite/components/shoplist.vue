@@ -28,7 +28,6 @@
     </div>
 </template>
 <script>
-import{mapState} from 'vuex'
 export default {
     data(){
         return {            
@@ -38,7 +37,12 @@ export default {
         }
     },
     computed:{
-        ...mapState(['latitude','longitude'])
+        latitude(){
+            return this.geohash.split(',')[0]
+        },
+        longitude(){
+            return this.geohash.split(',')[1]
+        }
     },
     async mounted(){
         await this.getShopListData(this.latitude,this.longitude)
@@ -85,7 +89,7 @@ export default {
             await this.axios.get('/shopping/restaurants',{
                 params:data
             }).then(res=>{
-                this.shopListAddr = res.data;
+                this.shopListAddr = res.data;           
                 this.hasGetData = true
             })
         }

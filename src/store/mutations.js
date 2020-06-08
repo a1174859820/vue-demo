@@ -1,11 +1,6 @@
 import { setStore, removeStore, getStore } from '../config/mUtils'
-import {RECORD_ADDRESS, RECORD_SHOPDETAIL, SAVE_GEOHASH,RECORD_USERINFO,ADD_CART,ADD_CART_NUMBER,REMOVE_CART,INIT_CART,SAVE_ADDDETAIL,SAVE_QUESTION,SAVE_REMARKS} from './mutation-type.js'
+import {RECORD_SHOPDETAIL, SAVE_GEOHASH,RECORD_USERINFO,ADD_CART,ADD_CART_NUMBER,REMOVE_CART,INIT_CART,SAVE_ADDDETAIL,SAVE_QUESTION,SAVE_REMARKS} from './mutation-type.js'
 export default{
-    //记录当前经纬度
-    [RECORD_ADDRESS](state,{latitude,longitude}){
-        state.latitude = latitude;
-        state.longitude = longitude
-    },
     //获取商店详情
     [RECORD_SHOPDETAIL](state,detail){
         state.shopDetail = detail
